@@ -10,7 +10,6 @@ export class UsersService {
   create(createUserDto: CreateUserDto) {
     this.lastId++;
     this.users.push({ id: this.lastId, ...createUserDto });
-    console.log(this.users);
   }
 
   find(id: number) {

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  analytics:
+    container_name: analytics
+    build: ./analytics
+    restart: always
+    ports:
+      - '3002:3002'
+
+  users:
+    container_name: users
+    build: ./users
+    restart: always
+    ports:
+      - '3001:3001'
+
+  gateway:
+    container_name: gateway
+    build: ./api-gateway
+    restart: always
+    ports:
+      - '3000:3000'
